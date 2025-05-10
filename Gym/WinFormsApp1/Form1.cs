@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+﻿namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
@@ -8,10 +8,7 @@ namespace WinFormsApp1
             toolStripMenuItem1.Image = Image.FromFile(@"E:\Code\GymManagementPJ\gym icons and images\Name-48-50px\img2.jpg");
         }
 
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         Boolean b = true;
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -28,5 +25,16 @@ namespace WinFormsApp1
                 toolStripMenuItem1.Image = Image.FromFile(@"E:\Code\GymManagementPJ\gym icons and images\Name-48-50px\img2.jpg");
             }
         }
+
+        // new member
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewMember nm = new NewMember();
+            nm.Show();
+        }
+
+
+
+
     }
 }

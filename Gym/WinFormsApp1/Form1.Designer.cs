@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
-            newToolStripMenuItem = new ToolStripMenuItem();
+            newMemberToolStripMenuItem = new ToolStripMenuItem();
             newStaffToolStripMenuItem = new ToolStripMenuItem();
             equipmentToolStripMenuItem = new ToolStripMenuItem();
             searchMemberToolStripMenuItem = new ToolStripMenuItem();
@@ -45,7 +45,7 @@
             // 
             menuStrip1.BackColor = Color.Transparent;
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, newToolStripMenuItem, newStaffToolStripMenuItem, equipmentToolStripMenuItem, searchMemberToolStripMenuItem, deleteMemberToolStripMenuItem, logOutToolStripMenuItem, exitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, newMemberToolStripMenuItem, newStaffToolStripMenuItem, equipmentToolStripMenuItem, searchMemberToolStripMenuItem, deleteMemberToolStripMenuItem, logOutToolStripMenuItem, exitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1300, 58);
@@ -58,15 +58,15 @@
             toolStripMenuItem1.Size = new Size(14, 54);
             toolStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
-            // newToolStripMenuItem
+            // newMemberToolStripMenuItem
             // 
-            newToolStripMenuItem.BackColor = Color.Silver;
-            newToolStripMenuItem.Image = (Image)resources.GetObject("newToolStripMenuItem.Image");
-            newToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
-            newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(163, 54);
-            newToolStripMenuItem.Text = "New Member";
-            newToolStripMenuItem.Click += newToolStripMenuItem_Click;
+            newMemberToolStripMenuItem.BackColor = Color.Silver;
+            newMemberToolStripMenuItem.Image = (Image)resources.GetObject("newMemberToolStripMenuItem.Image");
+            newMemberToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
+            newMemberToolStripMenuItem.Name = "newMemberToolStripMenuItem";
+            newMemberToolStripMenuItem.Size = new Size(163, 54);
+            newMemberToolStripMenuItem.Text = "New Member";
+            newMemberToolStripMenuItem.Click += newToolStripMenuItem_Click;
             // 
             // newStaffToolStripMenuItem
             // 
@@ -144,7 +144,7 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem newToolStripMenuItem;
+        private ToolStripMenuItem newMemberToolStripMenuItem;
         private ToolStripMenuItem newStaffToolStripMenuItem;
         private ToolStripMenuItem equipmentToolStripMenuItem;
         private ToolStripMenuItem searchMemberToolStripMenuItem;
