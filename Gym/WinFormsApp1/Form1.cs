@@ -5,6 +5,28 @@ namespace WinFormsApp1
         public Form1()
         {
             InitializeComponent();
+            toolStripMenuItem1.Image = Image.FromFile(@"E:\Code\GymManagementPJ\gym icons and images\Name-48-50px\img2.jpg");
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        Boolean b = true;
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (b == true)
+            {
+                menuStrip1.Dock = DockStyle.Left;
+                b = false;
+                toolStripMenuItem1.Image = Image.FromFile(@"E:\Code\GymManagementPJ\gym icons and images\Name-48-50px\img3.jpg");
+            }
+            else
+            {
+                menuStrip1.Dock = DockStyle.Top;
+                b = true;
+                toolStripMenuItem1.Image = Image.FromFile(@"E:\Code\GymManagementPJ\gym icons and images\Name-48-50px\img2.jpg");
+            }
         }
     }
 }
