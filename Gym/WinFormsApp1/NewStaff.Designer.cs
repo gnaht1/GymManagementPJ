@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewStaff));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtFName = new TextBox();
+            txtLName = new TextBox();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
-            dateTimePicker1 = new DateTimePicker();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            dateTimePicker2 = new DateTimePicker();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            dateTimePickerDOB = new DateTimePicker();
+            txtMobile = new TextBox();
+            txtEmail = new TextBox();
+            dateTimePickerJoinDate = new DateTimePicker();
+            txtState = new TextBox();
+            txtCity = new TextBox();
             label9 = new Label();
             Mail = new Label();
             Mobile = new Label();
@@ -47,25 +47,25 @@
             FirstName = new Label();
             label10 = new Label();
             label1 = new Label();
-            label2 = new Label();
+            city_label = new Label();
             btnReset = new Button();
             btnSave = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txtFName
             // 
-            textBox1.Location = new Point(155, 85);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtFName.Location = new Point(155, 85);
+            txtFName.Name = "txtFName";
+            txtFName.Size = new Size(125, 27);
+            txtFName.TabIndex = 0;
+            txtFName.TextChanged += textBox1_TextChanged;
             // 
-            // textBox2
+            // txtLName
             // 
-            textBox2.Location = new Point(155, 140);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 1;
+            txtLName.Location = new Point(155, 140);
+            txtLName.Name = "txtLName";
+            txtLName.Size = new Size(125, 27);
+            txtLName.TabIndex = 1;
             // 
             // radioButton1
             // 
@@ -91,49 +91,49 @@
             radioButton2.Text = "Female";
             radioButton2.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker1
+            // dateTimePickerDOB
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(168, 262);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(124, 27);
-            dateTimePicker1.TabIndex = 4;
+            dateTimePickerDOB.Format = DateTimePickerFormat.Short;
+            dateTimePickerDOB.Location = new Point(168, 262);
+            dateTimePickerDOB.Name = "dateTimePickerDOB";
+            dateTimePickerDOB.Size = new Size(124, 27);
+            dateTimePickerDOB.TabIndex = 4;
             // 
-            // textBox3
+            // txtMobile
             // 
-            textBox3.Location = new Point(155, 329);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 5;
+            txtMobile.Location = new Point(155, 329);
+            txtMobile.Name = "txtMobile";
+            txtMobile.Size = new Size(125, 27);
+            txtMobile.TabIndex = 5;
             // 
-            // textBox4
+            // txtEmail
             // 
-            textBox4.Location = new Point(481, 85);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 6;
+            txtEmail.Location = new Point(481, 85);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(125, 27);
+            txtEmail.TabIndex = 6;
             // 
-            // dateTimePicker2
+            // dateTimePickerJoinDate
             // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(481, 144);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(125, 27);
-            dateTimePicker2.TabIndex = 7;
+            dateTimePickerJoinDate.Format = DateTimePickerFormat.Short;
+            dateTimePickerJoinDate.Location = new Point(481, 144);
+            dateTimePickerJoinDate.Name = "dateTimePickerJoinDate";
+            dateTimePickerJoinDate.Size = new Size(125, 27);
+            dateTimePickerJoinDate.TabIndex = 7;
             // 
-            // textBox5
+            // txtState
             // 
-            textBox5.Location = new Point(481, 201);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 8;
+            txtState.Location = new Point(481, 201);
+            txtState.Name = "txtState";
+            txtState.Size = new Size(125, 27);
+            txtState.TabIndex = 8;
             // 
-            // textBox6
+            // txtCity
             // 
-            textBox6.Location = new Point(481, 266);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 9;
+            txtCity.Location = new Point(481, 266);
+            txtCity.Name = "txtCity";
+            txtCity.Size = new Size(125, 27);
+            txtCity.TabIndex = 9;
             // 
             // label9
             // 
@@ -238,16 +238,16 @@
             label1.TabIndex = 27;
             label1.Text = "State";
             // 
-            // label2
+            // city_label
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            label2.Location = new Point(406, 266);
-            label2.Name = "label2";
-            label2.Size = new Size(42, 23);
-            label2.TabIndex = 28;
-            label2.Text = "City";
+            city_label.AutoSize = true;
+            city_label.BackColor = Color.Transparent;
+            city_label.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            city_label.Location = new Point(406, 266);
+            city_label.Name = "city_label";
+            city_label.Size = new Size(42, 23);
+            city_label.TabIndex = 28;
+            city_label.Text = "City";
             // 
             // btnReset
             // 
@@ -260,6 +260,7 @@
             btnReset.Text = "Reset";
             btnReset.TextAlign = ContentAlignment.MiddleRight;
             btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
             // btnSave
             // 
@@ -272,6 +273,7 @@
             btnSave.Text = "Save";
             btnSave.TextAlign = ContentAlignment.MiddleRight;
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // NewStaff
             // 
@@ -282,7 +284,7 @@
             ClientSize = new Size(630, 484);
             Controls.Add(btnReset);
             Controls.Add(btnSave);
-            Controls.Add(label2);
+            Controls.Add(city_label);
             Controls.Add(label1);
             Controls.Add(label10);
             Controls.Add(label9);
@@ -291,16 +293,16 @@
             Controls.Add(label3);
             Controls.Add(LastName);
             Controls.Add(FirstName);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(txtCity);
+            Controls.Add(txtState);
+            Controls.Add(dateTimePickerJoinDate);
+            Controls.Add(txtEmail);
+            Controls.Add(txtMobile);
+            Controls.Add(dateTimePickerDOB);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtLName);
+            Controls.Add(txtFName);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "NewStaff";
@@ -312,16 +314,16 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtFName;
+        private TextBox txtLName;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private DateTimePicker dateTimePicker2;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private DateTimePicker dateTimePickerDOB;
+        private TextBox txtMobile;
+        private TextBox txtEmail;
+        private DateTimePicker dateTimePickerJoinDate;
+        private TextBox txtState;
+        private TextBox txtCity;
         private Label label9;
         private Label Mail;
         private Label Mobile;
@@ -330,7 +332,7 @@
         private Label FirstName;
         private Label label10;
         private Label label1;
-        private Label label2;
+        private Label city_label;
         private Button btnReset;
         private Button btnSave;
     }
