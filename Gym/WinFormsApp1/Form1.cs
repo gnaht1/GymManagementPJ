@@ -8,7 +8,7 @@
             toolStripMenuItem1.Image = Image.FromFile(@"E:\Code\GymManagementPJ\gym icons and images\Name-48-50px\img2.jpg");
         }
 
-        
+
         Boolean b = true;
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -33,8 +33,10 @@
             nm.Show();
         }
 
-
-
-
+        private void newStaffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewStaff ns = new NewStaff();
+            ns.Show();
+        }
     }
 }

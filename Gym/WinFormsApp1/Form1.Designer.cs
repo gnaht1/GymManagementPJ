@@ -76,6 +76,7 @@
             newStaffToolStripMenuItem.Name = "newStaffToolStripMenuItem";
             newStaffToolStripMenuItem.Size = new Size(138, 54);
             newStaffToolStripMenuItem.Text = "New Staff";
+            newStaffToolStripMenuItem.Click += newStaffToolStripMenuItem_Click;
             // 
             // equipmentToolStripMenuItem
             // 
