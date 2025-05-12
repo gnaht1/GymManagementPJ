@@ -1,8 +1,8 @@
 ﻿namespace WinFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
             toolStripMenuItem1.Image = Image.FromFile(@"E:\Code\GymManagementPJ\gym icons and images\Name-48-50px\img2.jpg");
@@ -37,6 +37,12 @@
         {
             NewStaff ns = new NewStaff();
             ns.Show();
+        }
+
+        private void equipmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Equipment eq = new Equipment();
+            eq.Show();
         }
     }
 }

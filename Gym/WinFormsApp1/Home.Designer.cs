@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
             newMemberToolStripMenuItem = new ToolStripMenuItem();
@@ -86,6 +86,7 @@
             equipmentToolStripMenuItem.Name = "equipmentToolStripMenuItem";
             equipmentToolStripMenuItem.Size = new Size(145, 54);
             equipmentToolStripMenuItem.Text = "Equipment";
+            equipmentToolStripMenuItem.Click += equipmentToolStripMenuItem_Click;
             // 
             // searchMemberToolStripMenuItem
             // 

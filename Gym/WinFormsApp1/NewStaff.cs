@@ -97,7 +97,7 @@ namespace WinFormsApp1
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Add staff successfully.");
-                            this.Close();
+                            //this.Close();
                         }
                         else
                         {

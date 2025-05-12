@@ -130,7 +130,7 @@ namespace WinFormsApp1
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Insert Member Successfully!");
-                            this.Close();
+                            //this.Close();
                         }
                         else
                         {
