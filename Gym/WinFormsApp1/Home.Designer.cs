@@ -96,6 +96,7 @@
             searchMemberToolStripMenuItem.Name = "searchMemberToolStripMenuItem";
             searchMemberToolStripMenuItem.Size = new Size(177, 54);
             searchMemberToolStripMenuItem.Text = "Search Member";
+            searchMemberToolStripMenuItem.Click += searchMemberToolStripMenuItem_Click;
             // 
             // deleteMemberToolStripMenuItem
             // 
@@ -124,7 +125,7 @@
             exitToolStripMenuItem.Size = new Size(72, 54);
             exitToolStripMenuItem.Text = "Exit";
             // 
-            // Form1
+            // Home
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -133,7 +134,7 @@
             ClientSize = new Size(1300, 690);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "Form1";
+            Name = "Home";
             Text = "Form1";
             WindowState = FormWindowState.Maximized;
             menuStrip1.ResumeLayout(false);

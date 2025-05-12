@@ -1,4 +1,6 @@
-﻿namespace WinFormsApp1
+﻿using GymManagement;
+
+namespace WinFormsApp1
 {
     public partial class Home : Form
     {
@@ -43,6 +45,12 @@
         {
             Equipment eq = new Equipment();
             eq.Show();
+        }
+
+        private void searchMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchMember sm = new SearchMember();
+            sm.Show();
         }
     }
 }
