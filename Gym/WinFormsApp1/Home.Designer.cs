@@ -104,8 +104,9 @@
             deleteMemberToolStripMenuItem.Image = (Image)resources.GetObject("deleteMemberToolStripMenuItem.Image");
             deleteMemberToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             deleteMemberToolStripMenuItem.Name = "deleteMemberToolStripMenuItem";
-            deleteMemberToolStripMenuItem.Size = new Size(177, 54);
-            deleteMemberToolStripMenuItem.Text = "Delete Member";
+            deleteMemberToolStripMenuItem.Size = new Size(152, 54);
+            deleteMemberToolStripMenuItem.Text = "Search Staff";
+            deleteMemberToolStripMenuItem.Click += deleteMemberToolStripMenuItem_Click;
             // 
             // logOutToolStripMenuItem
             // 
@@ -135,7 +136,7 @@
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Home";
-            Text = "Form1";
+            Text = "Home";
             WindowState = FormWindowState.Maximized;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

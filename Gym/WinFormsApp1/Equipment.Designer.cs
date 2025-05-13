@@ -200,7 +200,7 @@
             MinimizeBox = false;
             Name = "Equipment";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form2";
+            Text = "Equipments";
             Load += Equipment_Load;
             ResumeLayout(false);
             PerformLayout();

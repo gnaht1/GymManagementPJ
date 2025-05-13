@@ -52,5 +52,11 @@ namespace WinFormsApp1
             SearchMember sm = new SearchMember();
             sm.Show();
         }
+
+        private void deleteMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchStaff ss = new SearchStaff();
+            ss.Show();
+        }
     }
 }
