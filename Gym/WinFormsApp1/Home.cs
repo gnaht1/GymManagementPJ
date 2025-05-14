@@ -52,5 +52,20 @@ namespace WinFormsApp1
             SearchMember sm = new SearchMember();
             sm.Show();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Log out!, Confirm?","LOG OUT", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                this.Close();
+                Login lg = new Login();
+                lg.Show();
+            }
+        }
     }
 }

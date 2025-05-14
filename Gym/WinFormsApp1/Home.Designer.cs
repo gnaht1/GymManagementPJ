@@ -115,6 +115,7 @@
             logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             logOutToolStripMenuItem.Size = new Size(126, 54);
             logOutToolStripMenuItem.Text = "Log Out";
+            logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
@@ -124,6 +125,7 @@
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             exitToolStripMenuItem.Size = new Size(72, 54);
             exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // Home
             // 
