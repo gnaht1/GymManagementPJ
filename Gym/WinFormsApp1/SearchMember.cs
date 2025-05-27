@@ -130,7 +130,7 @@ namespace GymManagement
 
                             // Apply styling
                             dataGridView1.AutoGenerateColumns = true;
-                            dataGridView1.ReadOnly = true;
+                            dataGridView1.ReadOnly = false;
                             dataGridView1.AllowUserToAddRows = false;
                             dataGridView1.AllowUserToDeleteRows = false;
                             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
