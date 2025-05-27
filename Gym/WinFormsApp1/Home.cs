@@ -61,7 +61,12 @@ namespace WinFormsApp1
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Log OUT !! Confirm?", "LOG OUT", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                this.Hide();
+                Login loginForm = new Login();
+                loginForm.Show();
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
