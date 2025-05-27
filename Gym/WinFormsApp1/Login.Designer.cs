@@ -41,26 +41,25 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.BurlyWood;
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.BackColor = Color.Moccasin;
             panel1.Controls.Add(btnLogin);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(txtPassword);
             panel1.Controls.Add(txtUserName);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(650, 200);
+            panel1.Location = new Point(206, 80);
             panel1.Name = "panel1";
-            panel1.Size = new Size(693, 519);
+            panel1.Size = new Size(614, 438);
             panel1.TabIndex = 0;
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.DodgerBlue;
+            btnLogin.BackColor = Color.MediumSpringGreen;
             btnLogin.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(253, 358);
+            btnLogin.Location = new Point(246, 342);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(171, 37);
+            btnLogin.Size = new Size(133, 42);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
@@ -70,7 +69,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            label3.Location = new Point(202, 253);
+            label3.Location = new Point(139, 229);
             label3.Name = "label3";
             label3.Size = new Size(85, 23);
             label3.TabIndex = 4;
@@ -80,7 +79,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            label2.Location = new Point(202, 144);
+            label2.Location = new Point(139, 102);
             label2.Name = "label2";
             label2.Size = new Size(97, 23);
             label2.TabIndex = 3;
@@ -88,30 +87,30 @@
             // 
             // txtPassword
             // 
-            txtPassword.BackColor = Color.LightGray;
-            txtPassword.Font = new Font("Segoe UI", 10.2F);
-            txtPassword.Location = new Point(202, 279);
+            txtPassword.BackColor = SystemColors.MenuBar;
+            txtPassword.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(139, 255);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(273, 30);
+            txtPassword.Size = new Size(344, 30);
             txtPassword.TabIndex = 2;
             // 
             // txtUserName
             // 
-            txtUserName.BackColor = Color.LightGray;
-            txtUserName.Font = new Font("Segoe UI", 10.2F);
-            txtUserName.Location = new Point(202, 170);
+            txtUserName.BackColor = SystemColors.MenuBar;
+            txtUserName.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUserName.Location = new Point(139, 128);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(273, 30);
+            txtUserName.Size = new Size(344, 30);
             txtUserName.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(271, 79);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(227, 15);
             label1.Name = "label1";
-            label1.Size = new Size(130, 31);
+            label1.Size = new Size(169, 41);
             label1.TabIndex = 0;
             label1.Text = "Gym Login";
             // 
@@ -121,13 +120,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1149, 668);
+            ClientSize = new Size(1021, 621);
             Controls.Add(panel1);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
-            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -136,11 +135,11 @@
         #endregion
 
         private Panel panel1;
-        private Button btnLogin;
+        private Label label1;
         private Label label3;
         private Label label2;
         private TextBox txtPassword;
         private TextBox txtUserName;
-        private Label label1;
+        private Button btnLogin;
     }
 }

@@ -20,7 +20,6 @@ namespace GymManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
             if (txtUserName.Text == "admin" && txtPassword.Text == "admin")
             {
                 Home h = new Home();
@@ -29,7 +28,7 @@ namespace GymManagement
             }
             else
             {
-                MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Incorrect UserName or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

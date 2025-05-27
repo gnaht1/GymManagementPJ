@@ -53,6 +53,22 @@ namespace WinFormsApp1
             sm.Show();
         }
 
+        private void deleteMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchStaff ss = new SearchStaff();
+            ss.Show();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Log OUT !! Confirm?", "LOG OUT", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                this.Hide();
+                Login loginForm = new Login();
+                loginForm.Show();
+            }
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("This will close your application. Confirm?", "Close", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
@@ -62,17 +78,6 @@ namespace WinFormsApp1
             else
             {
                 MessageBox.Show("Welcome Back", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        
-        }
-
-        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Log out!, Confirm?","LOG OUT", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-            {
-                this.Close();
-                Login lg = new Login();
-                lg.Show();
             }
         }
     }
