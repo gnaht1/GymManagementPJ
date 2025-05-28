@@ -7,13 +7,14 @@ using Npgsql;
 using ScottPlot;
 using ScottPlot.WinForms;
 using ScottPlot.TickGenerators;
+using System.Globalization;
 using ScottPlot.Plottables; // Thêm using cho Alignment
 
 namespace GymManagement
 {
     public partial class OverviewDashboardForm : Form
     {
-       
+
         //private Panel panel1; // Đảm bảo bạn có Panel này trong Designer
 
         private string connectionString = "Host=localhost;Port=5432;Database=GymManagement;Username=postgres;Password=1234";
@@ -22,11 +23,11 @@ namespace GymManagement
         {
             InitializeComponent();
             // Khởi tạo các Label và Panel (nếu bạn không làm trong Designer)
-            
+
             LoadDashboard();
         }
 
-        
+
 
         private void LoadDashboard()
         {
@@ -43,10 +44,13 @@ namespace GymManagement
             double[] values = new double[12];
             double[] positions = new double[12];
             string[] labels = new string[12];
+            DateTimeFormatInfo dtfi = new CultureInfo("en-US", false).DateTimeFormat;
             for (int i = 0; i < 12; i++)
             {
                 positions[i] = i;
-                labels[i] = $"Tháng {i + 1}";
+                // Lấy tên tháng bằng tiếng Anh (ví dụ: "January", "February", ...)
+                // Hoặc bạn có thể dùng tên viết tắt: dtfi.GetAbbreviatedMonthName(i + 1)
+                labels[i] = dtfi.GetMonthName(i + 1);
             }
 
 
@@ -60,26 +64,26 @@ namespace GymManagement
                     // 1. Tổng số thành viên
                     using (var cmd = new NpgsqlCommand("SELECT COUNT(*) FROM NewMember", conn))
                     {
-                        lblTotalMembers.Text = "Tổng thành viên: " + cmd.ExecuteScalar().ToString();
+                        lblTotalMembers.Text = "Total member: " + cmd.ExecuteScalar().ToString();
                     }
 
                     // 2. Tổng số nhân viên
                     using (var cmd = new NpgsqlCommand("SELECT COUNT(*) FROM NewStaff", conn))
                     {
-                        lblTotalStaff.Text = "Tổng nhân viên: " + cmd.ExecuteScalar().ToString();
+                        lblTotalStaff.Text = "Total staff: " + cmd.ExecuteScalar().ToString();
                     }
 
                     // 3. Tổng số thiết bị
                     using (var cmd = new NpgsqlCommand("SELECT COUNT(*) FROM Equipment", conn))
                     {
-                        lblTotalEquipment.Text = "Tổng thiết bị: " + cmd.ExecuteScalar().ToString();
+                        lblTotalEquipment.Text = "Total Equipment: " + cmd.ExecuteScalar().ToString();
                     }
 
                     // 4. Tổng chi phí thiết bị
                     using (var cmd = new NpgsqlCommand("SELECT SUM(Cost) FROM Equipment", conn))
                     {
                         var result = cmd.ExecuteScalar();
-                        lblTotalEquipmentCost.Text = "Tổng chi phí thiết bị: " + (result != DBNull.Value ? Convert.ToDecimal(result).ToString("N0") : "0") + " VND";
+                        lblTotalEquipmentCost.Text = "Total Equipment Cost: " + (result != DBNull.Value ? Convert.ToDecimal(result).ToString("N0") : "0") + " USD";
                     }
 
                     // 5. Số thành viên mới trong tháng hiện tại
@@ -89,7 +93,7 @@ namespace GymManagement
                           WHERE EXTRACT(MONTH FROM JoinDate) = EXTRACT(MONTH FROM CURRENT_DATE)
                             AND EXTRACT(YEAR FROM JoinDate) = EXTRACT(YEAR FROM CURRENT_DATE)", conn))
                     {
-                        lblNewMembersThisMonth.Text = "Thành viên mới tháng này: " + cmd.ExecuteScalar().ToString();
+                        lblNewMembersThisMonth.Text = "New member in this month: " + cmd.ExecuteScalar().ToString();
                     }
 
                     // 6. Dữ liệu cho biểu đồ
@@ -127,9 +131,9 @@ namespace GymManagement
                 formsPlot.Plot.Axes.Bottom.TickLabelStyle.Alignment = Alignment.MiddleRight;
 
                 // Thiết lập tiêu đề và nhãn trục
-                formsPlot.Plot.Title("Số lượng thành viên mới theo tháng");
-                formsPlot.Plot.YLabel("Số lượng");
-                formsPlot.Plot.XLabel("Tháng");
+                formsPlot.Plot.Title("Number of new members per month");
+                formsPlot.Plot.YLabel("Number");
+                formsPlot.Plot.XLabel("Month");
 
                 // Đặt giới hạn trục Y
                 formsPlot.Plot.Axes.SetLimits(left: -0.5, right: 11.5, bottom: 0, top: values.Max() + 1);
@@ -147,6 +151,11 @@ namespace GymManagement
             {
                 MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void OverviewDashboardForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,8 +37,8 @@
             searchMemberToolStripMenuItem = new ToolStripMenuItem();
             deleteMemberToolStripMenuItem = new ToolStripMenuItem();
             logOutToolStripMenuItem = new ToolStripMenuItem();
-            exitToolStripMenuItem = new ToolStripMenuItem();
             dashBoardToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -119,24 +119,27 @@
             logOutToolStripMenuItem.Text = "Log Out";
             logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click;
             // 
+            // dashBoardToolStripMenuItem
+            // 
+            dashBoardToolStripMenuItem.BackColor = Color.Silver;
+            dashBoardToolStripMenuItem.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dashBoardToolStripMenuItem.Image = (Image)resources.GetObject("dashBoardToolStripMenuItem.Image");
+            dashBoardToolStripMenuItem.ImageAlign = ContentAlignment.MiddleLeft;
+            dashBoardToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
+            dashBoardToolStripMenuItem.Name = "dashBoardToolStripMenuItem";
+            dashBoardToolStripMenuItem.Size = new Size(157, 54);
+            dashBoardToolStripMenuItem.Text = "DashBoard";
+            dashBoardToolStripMenuItem.Click += dashBoardToolStripMenuItem_Click;
+            // 
             // exitToolStripMenuItem
             // 
-            exitToolStripMenuItem.BackColor = Color.Silver;
+            exitToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             exitToolStripMenuItem.Image = (Image)resources.GetObject("exitToolStripMenuItem.Image");
             exitToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             exitToolStripMenuItem.Size = new Size(72, 54);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
-            // 
-            // dashBoardToolStripMenuItem
-            // 
-            dashBoardToolStripMenuItem.BackColor = Color.FromArgb(128, 255, 255);
-            dashBoardToolStripMenuItem.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dashBoardToolStripMenuItem.Name = "dashBoardToolStripMenuItem";
-            dashBoardToolStripMenuItem.Size = new Size(107, 54);
-            dashBoardToolStripMenuItem.Text = "DashBoard";
-            dashBoardToolStripMenuItem.Click += dashBoardToolStripMenuItem_Click;
             // 
             // Home
             // 
