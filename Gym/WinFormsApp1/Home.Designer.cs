@@ -38,6 +38,7 @@
             deleteMemberToolStripMenuItem = new ToolStripMenuItem();
             logOutToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
+            dashBoardToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             // 
             menuStrip1.BackColor = Color.Transparent;
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, newMemberToolStripMenuItem, newStaffToolStripMenuItem, equipmentToolStripMenuItem, searchMemberToolStripMenuItem, deleteMemberToolStripMenuItem, logOutToolStripMenuItem, exitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, newMemberToolStripMenuItem, newStaffToolStripMenuItem, equipmentToolStripMenuItem, searchMemberToolStripMenuItem, deleteMemberToolStripMenuItem, logOutToolStripMenuItem, dashBoardToolStripMenuItem, exitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1300, 58);
@@ -128,6 +129,15 @@
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
+            // dashBoardToolStripMenuItem
+            // 
+            dashBoardToolStripMenuItem.BackColor = Color.FromArgb(128, 255, 255);
+            dashBoardToolStripMenuItem.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dashBoardToolStripMenuItem.Name = "dashBoardToolStripMenuItem";
+            dashBoardToolStripMenuItem.Size = new Size(107, 54);
+            dashBoardToolStripMenuItem.Text = "DashBoard";
+            dashBoardToolStripMenuItem.Click += dashBoardToolStripMenuItem_Click;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -157,5 +167,6 @@
         private ToolStripMenuItem deleteMemberToolStripMenuItem;
         private ToolStripMenuItem logOutToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem dashBoardToolStripMenuItem;
     }
 }

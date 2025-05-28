@@ -80,5 +80,11 @@ namespace WinFormsApp1
                 MessageBox.Show("Welcome Back", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void dashBoardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OverviewDashboardForm ov = new OverviewDashboardForm();
+            ov.Show();
+        }
     }
 }
